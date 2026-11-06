@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>김환희 · AI 엔지니어</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080e1b" />
+  <meta name="description" content="김환희의 AI 엔지니어링 포트폴리오. 머신러닝, 최적화, 데이터 분석 프로젝트를 소개합니다." />
+  <title>김환희 | AI Engineer</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080e1b;--surface:#111b2d;--line:#26344a;--ink:#eaf2ff;--muted:#99aac3;--accent:#73e0ce;--violet:#9d9af8}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7}
+    a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:4px}
+    .page{overflow:hidden;position:relative}.page:before{content:"";position:absolute;z-index:0;top:-330px;right:-300px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(76,98,196,.23),transparent 65%);pointer-events:none}.page:after{content:"";position:absolute;z-index:0;top:380px;left:-420px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(41,158,147,.09),transparent 65%);pointer-events:none}
+    .wrap{width:min(1080px,calc(100% - 48px));margin:auto;position:relative;z-index:1}
+    header{border-bottom:1px solid rgba(255,255,255,.07);position:relative;z-index:2}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:19px;font-weight:850;letter-spacing:-.7px}.brand span{color:var(--accent)}nav{display:flex;gap:28px}nav a{color:var(--muted);font-size:14px;transition:color .2s}nav a:hover{color:var(--accent)}
+    .hero{min-height:565px;padding:104px 0 94px;display:flex;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:750;letter-spacing:1.7px;text-transform:uppercase}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px rgba(115,224,206,.7)}h1,h2,h3,p{margin-top:0}.hero h1{margin:20px 0 22px;font-size:clamp(46px,7.5vw,84px);line-height:1.16;letter-spacing:-3.6px;font-weight:850}.gradient{background:linear-gradient(105deg,#72e2d0 10%,#8dafff 55%,#b39bfb);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:640px;color:#b4c1d5;font-size:18px;margin-bottom:34px;word-break:keep-all}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:720;font-size:14px;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#081b26;border-color:var(--accent)}.secondary{background:rgba(255,255,255,.035)}.secondary:hover{background:rgba(255,255,255,.08)}
+    section{padding:64px 0}.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}.section-head h2{margin:0;font-size:29px;letter-spacing:-.8px}.section-head .num{font-size:13px;color:var(--accent);font-weight:800;font-family:ui-monospace,monospace}.about{background:linear-gradient(120deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:18px;padding:30px 34px;color:#b7c6d9;word-break:keep-all}.about strong{color:var(--ink)}
+    .tags{display:flex;flex-wrap:wrap;gap:10px}.tag{background:#15253a;color:#c7d9ee;border:1px solid #2b4057;padding:8px 14px;border-radius:9px;font-size:13px;font-weight:650}
+    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.project{position:relative;min-height:220px;border:1px solid var(--line);border-radius:18px;padding:27px;background:linear-gradient(135deg,rgba(27,44,67,.85),rgba(14,23,39,.95));transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-4px);border-color:#487b8c}.project .category{color:var(--accent);font-size:11px;letter-spacing:1.3px;font-weight:850;text-transform:uppercase}.project h3{font-size:20px;line-height:1.35;margin:12px 0 12px;letter-spacing:-.3px}.project p{color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:18px}.project .stack{color:#b8adff;font-size:12px;font-weight:700}
+    .contact{padding:32px 34px;border-radius:18px;border:1px solid #2b5760;background:linear-gradient(115deg,rgba(54,147,139,.16),rgba(52,68,139,.13));display:flex;align-items:center;justify-content:space-between;gap:22px}.contact h3{font-size:23px;margin:0 0 6px}.contact p{color:var(--muted);font-size:14px;margin:0}footer{padding:42px 0 35px;color:#7e8fa8;font-size:12px;text-align:center}
+    @media(max-width:680px){.wrap{width:min(100% - 34px,1080px)}.nav{min-height:67px}nav{gap:14px}nav a{font-size:12px}.brand{font-size:17px}.hero{min-height:470px;padding:85px 0 65px}.hero h1{letter-spacing:-2px}.hero p{font-size:16px}.projects{grid-template-columns:1fr}.about{padding:24px}.contact{display:block;padding:25px}.contact .btn{margin-top:20px}section{padding:46px 0}.section-head h2{font-size:25px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>김환희</h1>
-    <p>AI 엔지니어</p>
-  </header>
-
+<div class="page">
+  <header><div class="wrap nav"><a class="brand" href="#home">Kim Hwanhee<span>.</span></a><nav aria-label="주 메뉴"><a href="#about">소개</a><a href="#skills">기술</a><a href="#projects">프로젝트</a><a href="#contact">연락처</a></nav></div></header>
   <main>
-    <section>
-      <h2>소개</h2>
-      <p>데이터와 AI 모델로 실생활 문제를 해결하는 AI 엔지니어입니다.</p>
-    </section>
-
-    <section>
-      <h2>기술</h2>
-      <ul>
-        <li>Python, PyTorch</li>
-        <li>FastAPI, Docker</li>
-        <li>PostgreSQL</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>연락처</h2>
-      <ul>
-        <li>이메일: <a href="mailto:hello@example.com">hello@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/Kimchona">github.com/Kimchona</a></li>
-      </ul>
-    </section>
+    <div class="wrap"><div id="home" class="hero"><div><div class="eyebrow"><span class="dot"></span>AI ENGINEER · PORTFOLIO</div><h1>데이터에서<br /><span class="gradient">해결책을 찾습니다.</span></h1><p>안녕하세요, 김환희입니다. 머신러닝과 최적화를 연결해 복잡한 문제를 분석하고, 실제로 작동하는 해결책을 만드는 AI 엔지니어를 지향합니다.</p><div class="actions"><a class="btn primary" href="#projects">프로젝트 살펴보기 ↗</a><a class="btn secondary" href="https://github.com/Kimchona" target="_blank" rel="noopener noreferrer">GitHub 방문 ↗</a></div></div></div></div>
+    <section id="about" class="wrap"><div class="section-head"><span class="num">01 /</span><h2>About Me</h2></div><div class="about"><strong>AI 모델과 최적화 알고리즘 사이의 연결에 관심이 있습니다.</strong><br />데이터 분석과 머신러닝을 기반으로 예측 모델을 설계하고, 조합최적화와 알고리즘을 통해 의사결정 문제를 해결하는 작업을 해왔습니다. 모델의 성능뿐 아니라 계산 효율성과 실제 적용 가능성을 함께 고민합니다.</div></section>
+    <section id="skills" class="wrap"><div class="section-head"><span class="num">02 /</span><h2>Tech Stack</h2></div><div class="tags" aria-label="기술 스택"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">LightGBM</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">C++</span><span class="tag">Optimization</span><span class="tag">Git & GitHub</span></div></section>
+    <section id="projects" class="wrap"><div class="section-head"><span class="num">03 /</span><h2>Selected Projects</h2></div><div class="projects">
+      <article class="project"><div class="category">OPTIMIZATION</div><h3>AGV 다중 에이전트 스케줄링</h3><p>여러 AGV의 작업 할당과 이동 경로를 최적화하는 문제를 풀기 위해 휴리스틱 탐색과 성능 개선을 실험했습니다.</p><div class="stack">Python · Simulated Annealing · Numba</div></article>
+      <article class="project"><div class="category">DEEP LEARNING</div><h3>AIS 선박 항로 복원</h3><p>관측이 누락된 선박 위치 데이터를 시계열 정보와 이동 특성을 활용해 복원하는 모델을 연구했습니다.</p><div class="stack">PyTorch · Transformer · Time Series</div></article>
+      <article class="project"><div class="category">PREDICTION + OPTIMIZATION</div><h3>재생에너지 발전량 예측</h3><p>발전량 예측과 후속 최적화를 연결하는 접근을 실험하며 오차 분석과 모델링 전략을 탐색했습니다.</p><div class="stack">Python · LightGBM · Data Analysis</div></article>
+      <article class="project"><div class="category">LLM ENGINEERING</div><h3>언어모델 경량화 실험</h3><p>모델의 정확도와 추론 속도 사이의 균형을 고려하며 양자화와 배포 효율을 실험했습니다.</p><div class="stack">PyTorch · GPTQ · vLLM</div></article>
+    </div></section>
+    <section id="contact" class="wrap"><div class="section-head"><span class="num">04 /</span><h2>Contact</h2></div><div class="contact"><div><h3>함께 이야기해요.</h3><p>프로젝트와 협업에 관한 이야기는 GitHub를 통해 남겨주세요.</p></div><a class="btn primary" href="https://github.com/Kimchona" target="_blank" rel="noopener noreferrer">GitHub 프로필 ↗</a></div></section>
   </main>
-
-  <footer>
-    <p>&copy; 2026 김환희</p>
-  </footer>
+  <footer class="wrap">© 2026 Kim Hwanhee. Built with HTML & CSS.</footer>
+</div>
 </body>
 </html>
